@@ -6,6 +6,7 @@ export default function MovieModal({onClose, selectedMovie}) {
 
 
   return (
+    <>
     <div className='movieModal'>
     <img src={selectedMovie.poster_path ? `https://image.tmdb.org/t/p/w500/${selectedMovie.poster_path}` : ''} alt="" />
     <div className="modal-content">
@@ -33,6 +34,9 @@ export default function MovieModal({onClose, selectedMovie}) {
             <p className="country">Country: {selectedMovie.production_countries[0].name}</p>
         </div>
     </div>
+
 </div>
+    <div className="overlay" onClick={onClose}></div>
+</>
   )
 }
