@@ -62,7 +62,7 @@ export default function Popular() {
                     title={movie.title}
                     year={movie.release_date.slice(0, 4)}
                     time={'140m'}
-                    onClick={() => handleMovieClick(movie.id)}
+                    onClick={() => handleMovieClick(movie.id) }
                 />
             ))}
 

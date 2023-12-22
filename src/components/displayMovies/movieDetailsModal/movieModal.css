@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: start;
+    justify-content: space-between;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -20,7 +21,7 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
     z-index: 4;
-    width: 60%;
+    width: 70%;
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
   .movieModal img {
@@ -29,7 +30,7 @@
   }
   
   .modal-content {
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -53,21 +54,33 @@
     line-height: 1.5;
     color: #ffffff;
     margin-left: 10px;
+    color: #ffffff7e;
+
+
 }
 
 .title {
     font-size: 28px;
     margin-bottom: 10px;
+    color: #fff;
+}
+
+.trailer {
+    margin-top: 20px;
+    width: 200px;
 }
 
 .description {
     margin-bottom: 15px;
     color: #ffffff7e;
+    width: 90%;
+    margin-top: 10px;
 }
 .categories {
     display: flex;
     gap: 15px;
     align-items: center;
+    margin: 10px 0 10px 0;
 }
 .categories .genre {
     background-color: cornflowerblue; 
