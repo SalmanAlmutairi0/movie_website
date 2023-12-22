@@ -38,7 +38,7 @@ export default function MovieModal({onClose, selectedMovie}) {
             <h2 className="title">{selectedMovie.original_title}</h2>
 
             {/* <Trailer movieId={selectedMovie.id} /> */}
-          <YouTube videoId={trailer} opts={{height: '300', width: '500'}} />
+          <YouTube videoId={trailer} opts={{height: '300', width: '500', playerVars: {autoplay: 1}}} />
             <div className="categories">
                 {selectedMovie.genres.map((genre, index) => (
                     <div key={index} className="genre">
