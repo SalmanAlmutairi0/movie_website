@@ -34,6 +34,10 @@ function Trending() {
   },[])
 
   const handleMovieClick = async (movieId) => {
+    if(selectedMovie) {
+      setSelectedMovie(null)
+      return
+    }
     const apiKey = process.env.REACT_APP_API_KEY
     const movieUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`
      try {
