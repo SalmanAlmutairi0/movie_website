@@ -1,0 +1,57 @@
+.movies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 0px;
+    border-radius: 10px;
+    transition: 0.2s ease-out;
+    max-width: 19%; /* Set a maximum width to limit the overall width */
+    overflow: hidden;
+}
+.movies:hover {
+    background-color: rgb(29, 3, 3);
+
+}
+.movies img {
+    width: 60%;
+    object-fit: fill;
+    border-radius: 10px;
+
+}
+.movies .title {
+    font-size: 18px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: wrap;
+    text-align: center;
+
+}
+
+.info  {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info p {
+    font-weight: 400;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+}
+
+.time p {
+    font-weight: 400;
+}
+.time .dot {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: red;
+}

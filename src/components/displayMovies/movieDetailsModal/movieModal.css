@@ -1,0 +1,90 @@
+.movieModal {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: start;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333; /* Dark background color */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Adjust the shadow color */
+    z-index: 1;
+    width: 60%;
+    /* height: 70%; */
+  }
+  
+  .modal-content {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.close {
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+}
+
+.details {
+    margin-top: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.description {
+    margin-bottom: 15px;
+    color: #ffffff7e;
+}
+.categories {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+.categories .genre {
+    background-color: cornflowerblue; 
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+
+}
+
+.rating-container {
+    display: flex;
+    align-items: flex-start;
+    
+    gap: 10px;
+}
+
+.rating-container img {
+    width: 20px;
+}
+
+
+
+.rating,
+.categories,
+.company,
+.release-date,
+.runtime,
+.country {
+    margin-bottom: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}

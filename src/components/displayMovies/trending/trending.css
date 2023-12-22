@@ -1,0 +1,20 @@
+p {
+    font-family: 'Inter', sans-serif;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    margin-top: 5%;
+    gap: 2%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 10px; */
+    justify-content: center;
+    width: 100%;
+
+}
+

@@ -1,0 +1,81 @@
+
+.hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+}
+
+
+
+.left-side {
+    width: 50%;
+    color: white;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.content h3 {
+    font-size: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+.content h1 {
+    font-size: 64px;
+    font-family: 'Bebas Neue', sans-serif;
+    background: linear-gradient(94deg, #2203FF 33.29%, #C40D60 67.01%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #CECECE;
+    font-weight: 500;
+    line-height: 1.5;
+    width: 70%;
+    margin-top: 10px;
+}
+
+.left-side button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 13px 30px;
+    margin-top: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.left-side button img {
+    width: 22px;
+}
+
+.left-side button:hover {
+   
+    border: 1px solid blueviolet;
+    color: blueviolet;
+  
+}
+
+.right-side {
+    position: relative;
+    right: -100px;
+}
+
+.right-side img {
+    width: 90%;
+}
+
+.back-img {
+    position: absolute;
+    transform: translate(-50%, -90%);
+}

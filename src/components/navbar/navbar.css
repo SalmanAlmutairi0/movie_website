@@ -1,0 +1,41 @@
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 10%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.logo h2 {
+    font-family: 'Just Another Hand', cursive;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+ul li {
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #C9C9C9;
+}
+ul li:hover{
+    color: #fff;
+    font-weight: 600;
+}

@@ -1,0 +1,43 @@
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.divider img {
+    width: 30px;
+}
+
+.divider h3 {
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.divider .line {
+    width: 80%;
+    height: 1px;
+    background-color: rgba(80, 74, 121, 0.50);
+    margin: 0 20px;
+}
+.divider a {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    transition: 0.2s ease-out;
+}
+.divider a:hover {
+    text-decoration: underline;
+    color: blueviolet;
+    text-underline-offset: 5px;
+}
