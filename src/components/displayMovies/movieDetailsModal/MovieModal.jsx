@@ -31,7 +31,7 @@ export default function MovieModal({onClose, selectedMovie}) {
   return (
     <>
     <div className='movieModal'>
-    <img src={selectedMovie.poster_path ? `https://image.tmdb.org/t/p/w500/${selectedMovie.poster_path}` : ''} alt="" />
+    <img className='poster' src={selectedMovie.poster_path ? `https://image.tmdb.org/t/p/w500/${selectedMovie.poster_path}` : ''} alt="" />
     <div className="modal-content">
         <span className="close" onClick={onClose}>&times;</span>
         <div className="details">
