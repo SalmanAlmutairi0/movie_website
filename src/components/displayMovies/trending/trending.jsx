@@ -23,6 +23,8 @@ function Trending() {
         const response = await fetch(apiUrl)
         const data = await response.json()
         setMovies(data.results)
+      console.log(data)
+
 
       } catch (error) {
         console.error('Error fetching movies:', error)
@@ -45,7 +47,6 @@ function Trending() {
       const data = await res.json()
       setSelectedMovie(data)
 
-
      } catch (error) {
       console.error('Error fetching movie details:', error)
      }
@@ -57,7 +58,7 @@ function Trending() {
     <main>
       <Divider
         icon={fireIcon}
-        text="Trending"
+        text="Trending Now"
       />
 
         <div className="container">
