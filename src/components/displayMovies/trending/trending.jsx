@@ -58,7 +58,7 @@ function Trending() {
     <main>
       <Divider
         icon={fireIcon}
-        text="Trending Now"
+        text="Trending"
       />
 
         <div className="container">
