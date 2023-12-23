@@ -23,6 +23,7 @@
     z-index: 4;
     width: 70%;
     height: 85%;
+    overflow-x: scroll;
     transition: opacity 0.3s ease, transform 0.3s ease;
   }
   .movieModal .poster {
