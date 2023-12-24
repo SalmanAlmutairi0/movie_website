@@ -23,99 +23,230 @@
     z-index: 4;
     width: 70%;
     height: 85%;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     transition: opacity 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
   }
   .movieModal .poster {
-    width: 47%;
+    width: 100%;
     height: 100%;
+    object-fit: fill;
     border-radius: 0 10px 10px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 3;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    font-size: 50px;
+    /* font-weight: 500; */
+    background-color: rgba(211, 211, 211, 0.383);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .close:hover {
+    color: #fff;
+    font-weight: 500;
   }
   
+  
   .modal-content {
-    /* background-color: #333; */
-    color: #fff;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 20px;
+    min-height: 100%;
+    /* height: 30vh; */
+    width: 50%;
     padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    width: 100%;
-}
-
-.close {
-    font-size: 50px;
-    color: #fff;
-    cursor: pointer;
+    z-index: 2;
+    background-color: #333333aa;
+   
     position: absolute;
-    top: 0px;
-    right: 15px;
-}
+    left: 0px;
+    padding-top: 2%;
+    padding-left: 20px;
+  }
 
-.details {
-    margin-top: 20px;
+  .modal-content .title {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
     font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    line-height: 1.5;
-    color: #ffffff;
-    margin-left: 10px;
-    color: #ffffff7e;
+  }
 
-
-}
-
-.title {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.trailer {
-    margin-top: 20px;
-    width: 200px;
-}
-
-.description {
-    margin-bottom: 15px;
-    color: #ffffff7e;
-    width: 90%;
-    margin-top: 10px;
-}
-.categories {
+  .movie-info {
     display: flex;
-    gap: 15px;
     align-items: center;
-    margin: 10px 0 10px 0;
-}
-.categories .genre {
-    background-color: cornflowerblue; 
-    color: #333;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
+    justify-content: center;
+    gap: 20px;
+    width: 60%;
+    background-color: rgba(211, 211, 211, 0.383);
+    padding: 10px 20px;
+    border-radius: 40px;
+  }
 
-}
-
-.rating-container {
+  .runtime , .movie-rating {
     display: flex;
-    align-items: flex-start;
-    
-    gap: 10px;
-}
-
-.rating-container img {
-    width: 20px;
-    
-}
-
-
-
-.rating,
-.categories,
-.company,
-.release-date,
-.runtime,
-.country {
-    margin-bottom: 10px;
-    font-family: 'Inter', sans-serif;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .runtime img , .movie-rating img{
+    width: 25px;
+  }
+  .runtime p , .movie-rating p , .movie-info p {
+    color: white;
     font-size: 16px;
-}
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .genres-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* width: 100%; */
+    margin-top: 20px;
+
+  }
+  .genres-title {
+    text-align: start;
+    color: #0000008b;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+  }
+  .geners {
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .gener  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(211, 211, 211, 0.383);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .overview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 90%;
+    margin-top: 20px;
+    background-color: rgba(211, 211, 211, 0.383);
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-left: -15px;
+  }
+  .overview-title {
+    text-align: start;
+    color: #0000008b;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+  }
+
+  .overview {
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    text-align: start;
+    line-height: 18px;
+    /* width: 60%; */
+  }
+
+  .prodection-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* width: 100%; */
+    margin-top: 20px;
+  }
+
+  .prodection-title {
+    text-align: start;
+    color: #0000008b;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+
+  }
+
+  .prodections{
+    display: flex;
+    /* justify-content: space-evenly; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .company {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(211, 211, 211, 0.383);
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .button {
+    position: absolute;
+    right: 5%;
+    bottom: 2%;
+    
+  }
+
+  .button button {
+    padding: 10px 20px;
+    /* background-color: rgba(211, 211, 211, 0.383); */
+    background-color: rgba(211, 211, 211, 0.383);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+  }
+
+  .button button:hover {
+    background-color: rgba(57, 55, 55, 0.783);
+  }
+
+  .trailer {
+    position: absolute;
+    top: 15%;
+    left: 10%; 
+    z-index: 4;
+  }
