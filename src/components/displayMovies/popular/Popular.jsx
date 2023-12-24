@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from "react";
-import "./popular.css";
+import React, { useEffect, useRef, useState } from "react";
 import '../trending/trending.css';
 import Divider from "../../divider/divider";
 import starIcon from "../../../img/star.png";
 import MoveCard from "../../movieCard/moveCard";
 import MovieModal from "../movieDetailsModal/MovieModal";
-
+import arrow from '../../../img/right-arrow.png'
+import ScrollArrows from "../scrollArrows/scrollArrows";
 export default function Popular() {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null)
+
+  const containerRef = useRef(null);
+
+   
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -53,9 +57,13 @@ export default function Popular() {
       <Divider icon={starIcon} text="Top Rated" />
 
       <div className="container">
+       
+        <ScrollArrows Ref={containerRef} arrow={arrow} />
+
+          <div className="movie-container" ref={containerRef}>
 
             {movies.map((movie, index) => (
-                index < 10 &&
+                index < 20 &&
                 <MoveCard
                     key={movie.id}
                     poster={movie.poster_path ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}` : null}
@@ -65,6 +73,7 @@ export default function Popular() {
                     onClick={() => handleMovieClick(movie.id) }
                 />
             ))}
+          </div>
 
             {selectedMovie && <MovieModal 
               onClose={() => setSelectedMovie(null)}

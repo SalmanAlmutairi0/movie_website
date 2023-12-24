@@ -4,17 +4,45 @@ p {
 main {
     display: flex;
     flex-direction: column;
-    height: 120vh;
+    /* height: 100vh; */
     margin-top: 5%;
     gap: 2%;
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    /* gap: 10px; */
-    justify-content: center;
+    justify-content: start;
     width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: thin; 
+    scrollbar-color: #333 #eee; 
+    scroll-behavior: smooth;
+  }
+
+  /* Optional: Style the scrollbar */
+.movie-container::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
+    cursor: pointer;
+}
+  
+.movie-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #eee;
 
 }
+
+.movie-container::-webkit-scrollbar-track {
+    background-color: #333;
+}
+
 

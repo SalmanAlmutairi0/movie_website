@@ -1,16 +1,22 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./trending.css";
+import '../scrollArrows/scrollArrows.css';
 import fireIcon from "../../../img/fire.png";
 import Divider from "../../divider/divider";
 import poster from "../../../img/image 23.png";
 import MoveCard from "../../movieCard/moveCard";
 import MovieModal from "../movieDetailsModal/MovieModal";
 
-
+import arrow from '../../../img/right-arrow.png'
+import ScrollArrows from "../scrollArrows/scrollArrows";
 
 function Trending() {
   const [movies, setMovies] = useState([])
   const [selectedMovie, setSelectedMovie] = useState(null)
+
+  const containerRef = useRef(null);
+
+  
 
   useEffect(() => {
 
@@ -23,7 +29,6 @@ function Trending() {
         const response = await fetch(apiUrl)
         const data = await response.json()
         setMovies(data.results)
-      console.log(data)
 
 
       } catch (error) {
@@ -61,18 +66,24 @@ function Trending() {
         text="Trending"
       />
 
-        <div className="container">
+        <div className="container" >
+        
+        <ScrollArrows Ref={containerRef} arrow={arrow}/>
 
-        {movies.map((movie, index) => (
-          index < 10 &&
-          <MoveCard key={movie.id} 
-          poster={movie.poster_path ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}` : poster}
-          title={movie.original_title}
-          year={movie.release_date.slice(0, 4)}
-          time={'140m'}
-          onClick = {() => handleMovieClick(movie.id)}
-          />
-        ))}
+
+        <div className="movie-container" ref={containerRef} >
+
+            {movies.map((movie, index) => (
+              index < 20 &&
+              <MoveCard key={movie.id} 
+              poster={movie.poster_path ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}` : poster}
+              title={movie.original_title}
+              year={movie.release_date.slice(0, 4)}
+              time={'140m'}
+              onClick = {() => handleMovieClick(movie.id)}
+              />
+            ))}
+            </div>
         </div>
 
           {selectedMovie && <MovieModal 

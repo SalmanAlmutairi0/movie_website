@@ -67,6 +67,7 @@
 }
 
 .right-side {
+    width: 27%;
     position: relative;
     right: -100px;
 }

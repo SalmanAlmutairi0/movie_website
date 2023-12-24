@@ -1,0 +1,37 @@
+.arrow-icon-right, .arrow-icon-left {
+    position: absolute;
+    background-color: rgba(211, 211, 211, 0.429);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+}
+
+.arrow-icon-right {
+    right: 10px;
+    top: 30%;
+    
+}
+.arrow-icon-left {
+    left: 10px;
+    top: 30%;
+}
+
+.arrow-icon-right:hover, .arrow-icon-left:hover {
+    background-color: rgba(211, 211, 211, 0.429);
+    scale: 1.1;
+}
+
+.arrow-icon-right img, .arrow-icon-left img {
+    width: 50px;
+    padding: 7px;
+}
+
+.arrow-icon-left img {
+    transform: rotate(180deg);
+}

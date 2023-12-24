@@ -8,15 +8,17 @@
     padding: 10px 0px;
     border-radius: 10px;
     transition: 0.2s ease-out;
-    max-width: 19%; /* Set a maximum width to limit the overall width */
+    max-width: 19%; 
     overflow: hidden;
+    flex-shrink: 0;
+    margin-bottom: 50px;
 }
 .movies:hover {
     background-color: rgb(29, 3, 3);
 
 }
 .movies img {
-    width: 60%;
+    width: 70%;
     object-fit: fill;
     border-radius: 10px;
 
