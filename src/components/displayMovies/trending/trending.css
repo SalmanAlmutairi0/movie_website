@@ -32,13 +32,12 @@ main {
     width: 2px;
     height: 5px;
     cursor: pointer;
+    height: 9px;
 }
   
 .movie-container::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    padding: 5px;
     background-color: #eee;
-
 }
 
 .movie-container::-webkit-scrollbar-track {
