@@ -36,10 +36,14 @@ export default function MovieModal({onClose, selectedMovie}) {
   return (
     <>
     <div className='movieModal' onClick={() => openTrailer ? setOpenTrailer(false) : '' }>
+   
     <img className='poster' src={selectedMovie.backdrop_path ? `https://image.tmdb.org/t/p/w500/${selectedMovie.backdrop_path}` : selectedMovie.poster_path } alt="" />
+       
         <div className="close" onClick={() => {onClose() ; setOpenTrailer(false)}  }>
             &times;
         </div>
+
+        
         <div className="modal-content"  >
 
             <h1 className='title'>{selectedMovie.original_title}</h1>
