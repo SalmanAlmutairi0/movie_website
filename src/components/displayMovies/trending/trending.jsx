@@ -8,7 +8,6 @@ import MoveCard from "../../movieCard/moveCard";
 import MovieModal from "../movieDetailsModal/MovieModal";
 import arrow from '../../../img/right-arrow.png'
 import ScrollArrows from "../scrollArrows/scrollArrows";
-import FideEffect from "../../fideEffect/FideEffect";
 
 function Trending() {
   const [movies, setMovies] = useState([])
@@ -47,6 +46,7 @@ function Trending() {
       return
     }
     const apiKey = process.env.REACT_APP_API_KEY
+
     const movieUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`
      try {
       const res = await fetch(movieUrl)
@@ -94,6 +94,8 @@ function Trending() {
             selectedMovie={selectedMovie}
           
           />}
+
+          
       
     </main>
   );
