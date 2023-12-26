@@ -31,11 +31,10 @@ ul {
 ul li {
     list-style: none;
     cursor: pointer;
-    font-family: var(--font);
+    font-size: 25px;
     font-weight: 400;
     color: #C9C9C9;
 }
 ul li:hover{
     color: #fff;
-    font-weight: 600;
 }

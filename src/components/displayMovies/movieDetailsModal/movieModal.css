@@ -45,11 +45,11 @@
     z-index: 3;
     cursor: pointer;
     transition: 0.3s ease-out;
-    font-size: 30px;
+    font-size: 45px;
     /* font-weight: 500; */
     background-color: rgba(211, 211, 211, 0.383);
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -83,7 +83,7 @@
 
   .modal-content .title {
     color: white;
-    font-size: 36px;
+    font-size: 40px;
     font-weight: 700;
 
   }
@@ -111,7 +111,7 @@
   }
   .runtime p , .movie-rating p , .movie-info p {
     color: white;
-    font-size: 16px;
+    font-size: 24px;
 
   }
 
@@ -128,7 +128,7 @@
     color: #0000008b;
     font-weight: 600;
 
-    font-size: 20px;
+    font-size: 24px;
   }
   .geners {
     display: flex;
@@ -145,7 +145,7 @@
     padding: 8px 15px;
     border-radius: 20px;
     color: white;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 1.5px;
 
@@ -166,16 +166,16 @@
     text-align: start;
     color: #0000008b;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .overview {
     color: #333;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
 
     text-align: start;
-    line-height: 18px;
+    line-height: 20px;
     /* width: 60%; */
   }
 
@@ -191,7 +191,7 @@
     text-align: start;
     color: #0000008b;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 24px;
 
   }
 
@@ -210,7 +210,7 @@
     padding: 10px 15px;
     border-radius: 20px;
     color: white;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
     letter-spacing: 1.5px;
 
@@ -230,7 +230,7 @@
     border: none;
     border-radius: 20px;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
     letter-spacing: 1px;
     cursor: pointer;

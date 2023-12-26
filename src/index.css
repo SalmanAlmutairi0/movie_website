@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Single+Day&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;700&display=swap');
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arvo', serif;
+  /* font-family: 'Arvo', serif; */
+  font-family: 'Teko', sans-serif;
+
 }
-:root {
-  --logo_font: 'Single Day', cursive;
-}
+
 
 
 
