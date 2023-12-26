@@ -1,6 +1,7 @@
 import React from 'react'
 import './fideEffect.css'
 
+
 export default function FideEffect() {
   return (
     <>
