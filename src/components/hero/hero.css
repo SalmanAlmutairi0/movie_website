@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 90vh;
+    height: 83vh;
     width: 100%;
 }
 
@@ -18,18 +18,18 @@
     flex-direction: column;
 }
 .content h3 {
-    font-size: 40px;
+    font-size: 45px;
     font-family: 'Bebas Neue', sans-serif;
 }
 .content h1 {
-    font-size: 56px;
+    font-size: 76px;
      background: linear-gradient(94deg, #2203FF 33.29%, #C40D60 67.01%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .content p {
-     font-size: 14px;
+     font-size: 24px;
     color: #CECECE;
     font-weight: 500;
     line-height: 1.5;
