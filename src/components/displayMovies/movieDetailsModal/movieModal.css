@@ -45,11 +45,12 @@
     z-index: 3;
     cursor: pointer;
     transition: 0.3s ease-out;
-    font-size: 45px;
+    font-size: 35px;
+    font-family: 'Bebas Neue', sans-serif;
     /* font-weight: 500; */
     background-color: rgba(211, 211, 211, 0.383);
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,7 +59,6 @@
 
   .close:hover {
     color: #fff;
-    transform: scale(1.1);
   }
   
   
