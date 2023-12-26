@@ -22,8 +22,8 @@
     font-family: 'Bebas Neue', sans-serif;
 }
 .content h1 {
-    font-size: 76px;
-     background: linear-gradient(94deg, #2203FF 33.29%, #C40D60 67.01%);
+    font-size: 64px;
+    background: linear-gradient(94deg, #2203FF 33.29%, #C40D60 67.01%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
