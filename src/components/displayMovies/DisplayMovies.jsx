@@ -1,12 +1,14 @@
-import React from 'react'
-import Trending from './trending/trending'
-import Popular from './popular/Popular'
+import React, { useEffect, useState } from 'react'
+import Trending from './trending/trending';
+import Popular from './popular/Popular';
 
 export default function DisplayMovies() {
+ 
   return (
-    <div>
-        <Trending />
-        <Popular />
-    </div>
+    <main>
+      <Trending />
+      <Popular />
+      
+    </main>
   )
 }
