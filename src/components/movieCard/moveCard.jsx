@@ -3,6 +3,7 @@ import "./moveCard.css";
 
 function MoveCard({poster, title, year, time, onClick}) {
   return (
+
     <div className="movies" onClick={onClick}>
       <img src={poster} alt="" />
       <p className="title">{title}</p>

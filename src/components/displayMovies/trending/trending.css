@@ -1,6 +1,6 @@
-p {
-    font-family: 'Inter', sans-serif;
-}
+/* p {
+    font-family: var(--font), sans-serif;
+} */
 main {
     display: flex;
     flex-direction: column;
@@ -11,14 +11,20 @@ main {
 
 .container {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     width: 100%;
     overflow: hidden;
     position: relative;
+    height: 75vh;
+
 }
+
+
 
 .movie-container {
     display: flex;
+    align-items: center;
+    gap: 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch; 
@@ -29,8 +35,10 @@ main {
 
   /* Optional: Style the scrollbar */
 .movie-container::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
+    cursor: pointer;
     height: 9px;
-
 }
   
 .movie-container::-webkit-scrollbar-thumb {

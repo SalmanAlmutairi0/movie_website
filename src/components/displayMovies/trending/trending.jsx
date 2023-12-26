@@ -6,14 +6,13 @@ import Divider from "../../divider/divider";
 import poster from "../../../img/image 23.png";
 import MoveCard from "../../movieCard/moveCard";
 import MovieModal from "../movieDetailsModal/MovieModal";
-
 import arrow from '../../../img/right-arrow.png'
 import ScrollArrows from "../scrollArrows/scrollArrows";
-import DisplayMovies from "../DisplayMovies";
 
 function Trending() {
   const [movies, setMovies] = useState([])
   const [selectedMovie, setSelectedMovie] = useState(null)
+
 
   const containerRef = useRef(null);
 
@@ -69,7 +68,9 @@ function Trending() {
       />
 
         <div className="container" >
-        
+
+          <FideEffect/>
+
         <ScrollArrows Ref={containerRef} arrow={arrow}/>
 
 

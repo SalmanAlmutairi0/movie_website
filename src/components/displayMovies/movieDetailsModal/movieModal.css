@@ -45,7 +45,7 @@
     z-index: 3;
     cursor: pointer;
     transition: 0.3s ease-out;
-    font-size: 50px;
+    font-size: 30px;
     /* font-weight: 500; */
     background-color: rgba(211, 211, 211, 0.383);
     width: 40px;
@@ -58,7 +58,7 @@
 
   .close:hover {
     color: #fff;
-    font-weight: 500;
+    transform: scale(1.1);
   }
   
   
@@ -83,15 +83,16 @@
 
   .modal-content .title {
     color: white;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 700;
-    font-family: 'Inter', sans-serif;
+
   }
 
   .movie-info {
     display: flex;
     align-items: center;
     justify-content: center;
+
     gap: 20px;
     width: 60%;
     background-color: rgba(211, 211, 211, 0.383);
@@ -111,8 +112,7 @@
   .runtime p , .movie-rating p , .movie-info p {
     color: white;
     font-size: 16px;
-    font-weight: 500;
-    font-family: 'Inter', sans-serif;
+
   }
 
   .genres-container {
@@ -127,7 +127,7 @@
     text-align: start;
     color: #0000008b;
     font-weight: 600;
-    font-family: 'Inter', sans-serif;
+
     font-size: 20px;
   }
   .geners {
@@ -148,7 +148,7 @@
     font-size: 15px;
     font-weight: 500;
     letter-spacing: 1.5px;
-    font-family: 'Inter', sans-serif;
+
   }
   
   .overview-container {
@@ -166,7 +166,6 @@
     text-align: start;
     color: #0000008b;
     font-weight: 700;
-    font-family: 'Inter', sans-serif;
     font-size: 20px;
   }
 
@@ -174,7 +173,7 @@
     color: #333;
     font-size: 14px;
     font-weight: 700;
-    font-family: 'Inter', sans-serif;
+
     text-align: start;
     line-height: 18px;
     /* width: 60%; */
@@ -192,7 +191,6 @@
     text-align: start;
     color: #0000008b;
     font-weight: 600;
-    font-family: 'Inter', sans-serif;
     font-size: 20px;
 
   }
@@ -215,7 +213,7 @@
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 1.5px;
-    font-family: 'Inter', sans-serif;
+
   }
 
   .button {
@@ -234,8 +232,7 @@
     color: white;
     font-size: 16px;
     font-weight: 500;
-    letter-spacing: 1.5px;
-    font-family: 'Inter', sans-serif;
+    letter-spacing: 1px;
     cursor: pointer;
     transition: 0.3s ease-out;
   }

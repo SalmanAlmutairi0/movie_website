@@ -118,38 +118,10 @@ export default function MovieModal({onClose, selectedMovie}) {
                     </div>
         </div>
                 {openTrailer && <div className="trailer">
-                    <YouTube videoId={trailer} opts={{height: '500', width: '800', }} />
+                    <YouTube videoId={trailer} opts={{height: '500', width: '800', playerVars: {autoplay: 1} }} />
                 </div>}
    
    
-    {/* <div className="modal-content">
-        <span className="close" onClick={onClose}>&times;</span>
-        <div className="details">
-            <h2 className="title">{selectedMovie.original_title}</h2>
-
-          <YouTube videoId={trailer} opts={{height: '300', width: '500', playerVars: {autoplay: 1}}} />
-            <div className="categories">
-                {selectedMovie.genres.map((genre, index) => (
-                    <div key={index} className="genre">
-                        <p>{genre.name}</p>
-                    </div>
-                ))}
-                
-            </div>
-            <p className="description">
-                {selectedMovie.overview}
-            </p>
-            <p className="release-date">Release Date: {selectedMovie.release_date.slice(0, 4)}</p>
-            <p className="company">Company: {selectedMovie.production_companies[0].name}</p>
-            <p className="runtime">Runtime: {selectedMovie.runtime}m</p>
-            <div className="rating-container">
-                <img src={ratingIcon} />
-            <p className="rating">Rating: 8.708</p>
-            </div>
-            <p className="country">Country: {selectedMovie.production_countries[0].name}</p>
-        </div>
-    </div> */}
-
 </div>
     <div className="overlay" onClick={onClose}></div>
 </>

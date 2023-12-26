@@ -6,6 +6,7 @@ import MoveCard from "../../movieCard/moveCard";
 import MovieModal from "../movieDetailsModal/MovieModal";
 import arrow from '../../../img/right-arrow.png'
 import ScrollArrows from "../scrollArrows/scrollArrows";
+import FideEffect from "../../fideEffect/FideEffect";
 export default function Popular() {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null)
@@ -58,6 +59,8 @@ export default function Popular() {
 
       <div className="container">
        
+       <FideEffect />
+
         <ScrollArrows Ref={containerRef} arrow={arrow} />
 
           <div className="movie-container" ref={containerRef}>
