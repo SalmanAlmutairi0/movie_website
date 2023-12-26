@@ -1,5 +1,8 @@
 body {
-  background: linear-gradient(238deg, #1F020B 9.3%, rgba(31, 2, 11, 0.00) 83.55%);
-  background-color: black;
-  /* height: 100vh; */
+  /* background-image: url('./img/fht6.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right; */
+  background-color: #0d192b
+  ;
 }

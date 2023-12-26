@@ -22,16 +22,14 @@
     font-family: 'Bebas Neue', sans-serif;
 }
 .content h1 {
-    font-size: 60px;
-    font-family: 'Bebas Neue', sans-serif;
-    background: linear-gradient(94deg, #2203FF 33.29%, #C40D60 67.01%);
+    font-size: 56px;
+     background: linear-gradient(94deg, #2203FF 33.29%, #C40D60 67.01%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 .content p {
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
+     font-size: 14px;
     color: #CECECE;
     font-weight: 500;
     line-height: 1.5;
@@ -45,6 +43,7 @@
     gap: 5px;
     padding: 13px 30px;
     margin-top: 40px;
+    letter-spacing: 1px;
     font-weight: 600;
     font-size: 16px;
     color: #fff;

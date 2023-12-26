@@ -1,3 +1,4 @@
+
 .movies {
     display: flex;
     flex-direction: column;
@@ -9,22 +10,24 @@
     border-radius: 10px;
     transition: 0.2s ease-out;
     max-width: 19%; 
-    overflow: hidden;
     flex-shrink: 0;
+    overflow: hidden;
     margin-bottom: 50px;
+    background-color: rgba(211, 211, 211, 0.128);
+
+
 }
 .movies:hover {
-    background-color: rgb(29, 3, 3);
-
+    background-color: rgba(211, 211, 211, 0.463);
+    transform: translateY(-10px) scale(1.1);
 }
 .movies img {
-    width: 70%;
-    object-fit: fill;
+    width: 75%;
     border-radius: 10px;
-
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 .movies .title {
-    font-size: 18px;
+      font-size: 16px;
     font-weight: 500;
     overflow: hidden;
     text-overflow: clip;
@@ -40,7 +43,9 @@
 }
 
 .info p {
+      font-size: 14px;
     font-weight: 400;
+
 }
 
 .time {

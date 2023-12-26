@@ -1,8 +1,9 @@
 import React from 'react'
-import Trending from './trending/trending'
 import Popular from './popular/Popular'
+import Trending from './trending/trending'
 
-export default function DisplayMovies() {
+
+ export default function DisplayMovies() {
   return (
     <div>
         <Trending />
@@ -10,3 +11,4 @@ export default function DisplayMovies() {
     </div>
   )
 }
+
