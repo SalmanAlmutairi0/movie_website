@@ -4,7 +4,7 @@
 main {
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
+    height: 70vh;
     margin-top: 5%;
     gap: 2%;
 }

@@ -1,8 +1,8 @@
 .fide-effect {
     position: absolute;
-    top: 25px;
+    top: 20px;
     width: 100px;
-    height: 80%;
+    height: 100%;
     z-index: 3;
 
 }
