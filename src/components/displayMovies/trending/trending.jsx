@@ -69,9 +69,10 @@ function Trending() {
       />
 
         <div className="container" >
-
-          <FideEffect/>
-
+          
+          {/* if the modal is open hide the fide effect */}
+          {!selectedMovie && <FideEffect/>}
+          
         <ScrollArrows Ref={containerRef} arrow={arrow}/>
 
 
