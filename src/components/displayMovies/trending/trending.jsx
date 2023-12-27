@@ -77,7 +77,9 @@ function Trending() {
       />
 
         <div className="container" >
+
           {loading && <Loading />}
+          
           {/* if the modal is open hide the fide effect */}
           {!selectedMovie && <FideEffect/>}
           

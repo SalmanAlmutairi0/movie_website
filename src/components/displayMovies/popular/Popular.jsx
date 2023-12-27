@@ -7,10 +7,11 @@ import MovieModal from "../movieDetailsModal/MovieModal";
 import arrow from '../../../img/right-arrow.png'
 import ScrollArrows from "../scrollArrows/scrollArrows";
 import FideEffect from "../../fideEffect/FideEffect";
+import Loading from "../../loading/Loading";
 export default function Popular() {
   const [movies, setMovies] = useState([]);
   const [selectedMovie, setSelectedMovie] = useState(null)
-
+  const [loading, setLoading] = useState(true)
   const containerRef = useRef(null);
 
    
@@ -22,11 +23,14 @@ export default function Popular() {
       const apiUrl = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}`;
 
       try {
+        setLoading(true)
         const response = await fetch(apiUrl);
         const data = await response.json();
         setMovies(data.results);
       } catch (error) {
         console.error("Error fetching movies:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -42,12 +46,15 @@ export default function Popular() {
     const apiKey = process.env.REACT_APP_API_KEY
     const movieUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`
      try {
+      setLoading(true)
       const res = await fetch(movieUrl)
       const data = await res.json()
        setSelectedMovie(data)
 
      } catch (error) {
       console.error('Error fetching movie details:', error)
+     }finally{
+      setLoading(false)
      }
   }
 
@@ -59,6 +66,8 @@ export default function Popular() {
 
       <div className="container">
        
+        {loading && <Loading />}
+
        <FideEffect />
 
         <ScrollArrows Ref={containerRef} arrow={arrow} />
