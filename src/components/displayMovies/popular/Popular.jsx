@@ -68,7 +68,8 @@ export default function Popular() {
        
         {loading && <Loading />}
 
-       <FideEffect />
+      {/* if the modal is open hide the fide effect */}
+      {!selectedMovie && <FideEffect/>}
 
         <ScrollArrows Ref={containerRef} arrow={arrow} />
 
