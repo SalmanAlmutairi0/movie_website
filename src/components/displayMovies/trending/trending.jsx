@@ -9,11 +9,12 @@ import MovieModal from "../movieDetailsModal/MovieModal";
 import arrow from '../../../img/right-arrow.png'
 import ScrollArrows from "../scrollArrows/scrollArrows";
 import FideEffect from "../../fideEffect/FideEffect";
+import Loading from "../../loading/Loading";
 
 function Trending() {
   const [movies, setMovies] = useState([])
   const [selectedMovie, setSelectedMovie] = useState(null)
-
+  const [loading, setLoading] = useState(true)
 
   const containerRef = useRef(null);
 
@@ -26,7 +27,7 @@ function Trending() {
       const apiUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`
 
       try {
-
+        setLoading(true)
         const response = await fetch(apiUrl)
         const data = await response.json()
         setMovies(data.results)
@@ -34,6 +35,9 @@ function Trending() {
 
       } catch (error) {
         console.error('Error fetching movies:', error)
+      
+      }finally{
+        setLoading(false)
       }
     }
 
@@ -50,13 +54,17 @@ function Trending() {
 
     const movieUrl = `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`
      try {
+      setLoading(true)
       const res = await fetch(movieUrl)
       const data = await res.json()
       setSelectedMovie(data)
 
      } catch (error) {
       console.error('Error fetching movie details:', error)
-     }
+     
+    }finally{
+      setLoading(false)
+    }
   }
 
 
@@ -69,7 +77,7 @@ function Trending() {
       />
 
         <div className="container" >
-          
+          {loading && <Loading />}
           {/* if the modal is open hide the fide effect */}
           {!selectedMovie && <FideEffect/>}
           

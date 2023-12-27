@@ -5,20 +5,22 @@ import YouTube from 'react-youtube'
 
 import runtimeIcon from '../../../img/runtimeIcon.png'
 import imdbIcon from '../../../img/imdb.png'
+import Loading from '../../loading/Loading'
 
 
 export default function MovieModal({onClose, selectedMovie}) {
 
     const [trailer, setTrailer] = useState(null)
     const [openTrailer, setOpenTrailer] = useState(false)
-
+    const [loading, setLoading] = useState(true)
 
     const apiKey = process.env.REACT_APP_API_KEY
     const movieUrl = `https://api.themoviedb.org/3/movie/${selectedMovie.id}/videos?api_key=${apiKey}`
      
     useEffect(() => {
         console.log('enterd')
-            const fetchTrailer = async () => {
+        const fetchTrailer = async () => {
+                setLoading(true)
                 try {
                     const response = await fetch(movieUrl)
                     const data = await response.json()
@@ -26,6 +28,9 @@ export default function MovieModal({onClose, selectedMovie}) {
 
                 } catch (error) {
                     console.error('Error fetching trailer:', error)
+                
+                }finally{
+                    setLoading(false)
                 }
             }
 
@@ -36,7 +41,9 @@ export default function MovieModal({onClose, selectedMovie}) {
   return (
     <>
     <div className='movieModal' onClick={() => openTrailer ? setOpenTrailer(false) : '' }>
-   
+
+    {loading && <Loading />} 
+
     <img className='poster' src={selectedMovie.backdrop_path ? `https://image.tmdb.org/t/p/w500/${selectedMovie.backdrop_path}` : selectedMovie.poster_path } alt="" />
        
         <div className="close" onClick={() => {onClose() ; setOpenTrailer(false)}  }>
